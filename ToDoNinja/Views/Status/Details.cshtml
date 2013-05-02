@@ -1,0 +1,57 @@
+﻿@model ToDoNinja.Models.Status
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Status</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EnumID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EnumID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EnumName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EnumName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UpdaedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpdaedBy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UpdatedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpdatedDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,71 @@
+﻿@model ToDoNinja.Models.Task
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Task</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Project.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Project.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Resource.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Resource.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Status.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Priority.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Priority.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Urgency.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Urgency.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UpdatedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpdatedBy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UpdatedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpdatedDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

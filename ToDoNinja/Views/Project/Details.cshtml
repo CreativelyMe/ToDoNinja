@@ -1,0 +1,64 @@
+﻿@model ToDoNinja.Models.Project
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Project</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateDue)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateDue)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateStart)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateStart)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PercentComplete)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PercentComplete)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UpdaedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpdaedBy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UpdatedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpdatedDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

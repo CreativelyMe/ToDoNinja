@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ToDoNinjaModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ToDoNinjaModelStoreContainer">
+    <EntitySet Name="Priority" EntityType="ToDoNinjaModel.Store.Priority" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="ToDoNinjaModel.Store.Project" store:Type="Tables" />
+    <EntitySet Name="Resource" EntityType="ToDoNinjaModel.Store.Resource" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="ToDoNinjaModel.Store.Status" store:Type="Tables" />
+    <EntitySet Name="Task" EntityType="ToDoNinjaModel.Store.Task" store:Type="Tables" />
+    <EntitySet Name="Urgency" EntityType="ToDoNinjaModel.Store.Urgency" store:Type="Tables" />
+    <AssociationSet Name="FK_Task_Priority" Association="ToDoNinjaModel.Store.FK_Task_Priority">
+      <End Role="Priority" EntitySet="Priority" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_Project" Association="ToDoNinjaModel.Store.FK_Task_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_Resource" Association="ToDoNinjaModel.Store.FK_Task_Resource">
+      <End Role="Resource" EntitySet="Resource" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_Status" Association="ToDoNinjaModel.Store.FK_Task_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_Urgency" Association="ToDoNinjaModel.Store.FK_Task_Urgency">
+      <End Role="Urgency" EntitySet="Urgency" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Priority">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="EnumID" Type="int" Nullable="false" />
+    <Property Name="EnumName" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UpdaedBy" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="DateDue" Type="datetime" Nullable="false" />
+    <Property Name="DateStart" Type="datetime" Nullable="false" />
+    <Property Name="PercentComplete" Type="int" Nullable="false" />
+    <Property Name="UpdaedBy" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Resource">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="UpdaedBy" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="EnumID" Type="int" Nullable="false" />
+    <Property Name="EnumName" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UpdaedBy" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="ProjectID" Type="int" Nullable="false" />
+    <Property Name="ResourceID" Type="int" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+    <Property Name="PriorityID" Type="int" Nullable="false" />
+    <Property Name="UrgencyID" Type="int" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Urgency">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="EnumID" Type="int" Nullable="false" />
+    <Property Name="EnumName" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UpdaedBy" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Task_Priority">
+    <End Role="Priority" Type="ToDoNinjaModel.Store.Priority" Multiplicity="1" />
+    <End Role="Task" Type="ToDoNinjaModel.Store.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Priority">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="PriorityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_Project">
+    <End Role="Project" Type="ToDoNinjaModel.Store.Project" Multiplicity="1" />
+    <End Role="Task" Type="ToDoNinjaModel.Store.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_Resource">
+    <End Role="Resource" Type="ToDoNinjaModel.Store.Resource" Multiplicity="1" />
+    <End Role="Task" Type="ToDoNinjaModel.Store.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resource">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="ResourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_Status">
+    <End Role="Status" Type="ToDoNinjaModel.Store.Status" Multiplicity="1" />
+    <End Role="Task" Type="ToDoNinjaModel.Store.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_Urgency">
+    <End Role="Urgency" Type="ToDoNinjaModel.Store.Urgency" Multiplicity="1" />
+    <End Role="Task" Type="ToDoNinjaModel.Store.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urgency">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="UrgencyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
