@@ -298,6 +298,7 @@
     <Content Include="css\bootstrap-responsive.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\docs.css" />
     <Content Include="css\ToDoNinja.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -305,6 +306,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ToDoNinja.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="gridPlayground.html" />
     <Content Include="img\glyphicons-halflings-white.png" />
     <Content Include="img\glyphicons-halflings.png" />
     <Content Include="js\bootstrap.js" />
@@ -337,6 +339,37 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="vendors\google-code-prettify\lang-apollo.js" />
+    <Content Include="vendors\google-code-prettify\lang-basic.js" />
+    <Content Include="vendors\google-code-prettify\lang-clj.js" />
+    <Content Include="vendors\google-code-prettify\lang-css.js" />
+    <Content Include="vendors\google-code-prettify\lang-dart.js" />
+    <Content Include="vendors\google-code-prettify\lang-erlang.js" />
+    <Content Include="vendors\google-code-prettify\lang-go.js" />
+    <Content Include="vendors\google-code-prettify\lang-hs.js" />
+    <Content Include="vendors\google-code-prettify\lang-lisp.js" />
+    <Content Include="vendors\google-code-prettify\lang-llvm.js" />
+    <Content Include="vendors\google-code-prettify\lang-lua.js" />
+    <Content Include="vendors\google-code-prettify\lang-matlab.js" />
+    <Content Include="vendors\google-code-prettify\lang-ml.js" />
+    <Content Include="vendors\google-code-prettify\lang-mumps.js" />
+    <Content Include="vendors\google-code-prettify\lang-n.js" />
+    <Content Include="vendors\google-code-prettify\lang-pascal.js" />
+    <Content Include="vendors\google-code-prettify\lang-proto.js" />
+    <Content Include="vendors\google-code-prettify\lang-r.js" />
+    <Content Include="vendors\google-code-prettify\lang-rd.js" />
+    <Content Include="vendors\google-code-prettify\lang-scala.js" />
+    <Content Include="vendors\google-code-prettify\lang-sql.js" />
+    <Content Include="vendors\google-code-prettify\lang-tcl.js" />
+    <Content Include="vendors\google-code-prettify\lang-tex.js" />
+    <Content Include="vendors\google-code-prettify\lang-vb.js" />
+    <Content Include="vendors\google-code-prettify\lang-vhdl.js" />
+    <Content Include="vendors\google-code-prettify\lang-wiki.js" />
+    <Content Include="vendors\google-code-prettify\lang-xq.js" />
+    <Content Include="vendors\google-code-prettify\lang-yaml.js" />
+    <Content Include="vendors\google-code-prettify\prettify.css" />
+    <Content Include="vendors\google-code-prettify\prettify.js" />
+    <Content Include="vendors\google-code-prettify\run_prettify.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

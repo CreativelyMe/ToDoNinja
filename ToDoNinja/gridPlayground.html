@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Grid Playground</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/docs.css" rel="stylesheet" />
+    <link href="vendors/google-code-prettify/prettify.css" rel="stylesheet" />
+
+    <style type="text/css">
+        div {
+            margin-bottom:10px;
+            margin-top:10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="row" style="background-color:#222222; height:30px; text-align:center; color:#ffffff;">
+        Grid Playground
+    </div>
+    <div class="row">
+        <div class="span12" style="text-align:center; background-color:#DDDDDD;">
+            <p>I'm a 12 span division in a row, but I am NOT in a container... Notice how I float all the way to the left</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="span12" style="text-align:center; background-color:#DDDDDD;">
+                <p>I'm a 12 span division in a row, but I AM in a container... I'm still floating to the left, but I'm doing so within a container.</p>
+
+                <p style="text-align:left;">So, containers are a way to define a space within the page that is centered and some number of pixels in width. 
+                    Containers, as their name suggests contain things and present them within the centered view they define.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p>Here's what the code looks like that defines Rows and Span Divisions</p>
+
+<pre class="prettyprint linenums">
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="span12" style="text-align:center; background-color:#DDDDDD;"&gt;
+</pre>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="span12" style="text-align:center;">
+               
+            </div>
+        </div>
+
+        <p>Here's the code to create a division with a 1 column span</p>
+<pre class="prettyprint linenums">
+&lt;div class="span1"&gt; Span 1 &lt;/div&gt;
+</pre>
+        
+        <div class="row">
+            <div class="span1" style="background-color:#0094ff; height:40px;"> Span 1</div>
+        </div>
+        <p>That's what a 1 column span looks like - <em> in all cases, I've added the color to make it obvious... divisions are transparent unless you color them.</em></p>
+
+        <p>Here's the code to create a division with a 12 column span</p>
+<pre class="prettyprint linenums">
+&lt;div class="span12"&gt; Span 12 &lt;/div&gt;
+</pre>
+        
+        <div class="row">
+            <div class="span12" style="background-color:#0094ff; height:40px;"> Span 12 </div>
+        </div>
+        <p>And, that's what a 12 column span looks like</p>
+
+        <p>&nbsp;</p>
+
+        <p>So, to make a different size span, just use a different class from span1 to span12</p>
+
+        <div class="row">
+            <div class="span1" style="background-color:#ff6a00; height:40px;"> Span 1 </div>
+            <div class="span11" style="background-color:#0094ff; height:40px;"> Span 11 </div>
+        </div>
+        <div class="row">
+            <div class="span2" style="background-color:#ff6a00; height:40px;"> Span 2 </div>
+            <div class="span10" style="background-color:#0094ff; height:40px;"> Span 10 </div>
+        </div>
+        <div class="row">
+            <div class="span3" style="background-color:#ff6a00; height:40px;"> Span 3 </div>
+            <div class="span9" style="background-color:#0094ff; height:40px;"> Span 9 </div>
+        </div>
+        <div class="row">
+            <div class="span4" style="background-color:#ff6a00; height:40px;"> Span 4 </div>
+            <div class="span8" style="background-color:#0094ff; height:40px;"> Span 8 </div>
+        </div>
+        <div class="row">
+            <div class="span5" style="background-color:#ff6a00; height:40px;"> Span 5 </div>
+            <div class="span7" style="background-color:#0094ff; height:40px;"> Span 7 </div>
+        </div>
+        <div class="row">
+            <div class="span6" style="background-color:#ff6a00; height:40px;"> Span 6 </div>
+            <div class="span6" style="background-color:#0094ff; height:40px;"> Span 6 </div>
+        </div>
+
+        <div class="row">
+            <div class="span7" style="background-color:#ff6a00; height:40px;"> Span 7 </div>
+            <div class="span5" style="background-color:#0094ff; height:40px;"> Span 5 </div>
+        </div>
+        <div class="row">
+            <div class="span8" style="background-color:#ff6a00; height:40px;"> Span 8 </div>
+            <div class="span4" style="background-color:#0094ff; height:40px;"> Span 4 </div>
+        </div>
+        <div class="row">
+            <div class="span9" style="background-color:#ff6a00; height:40px;"> Span 9 </div>
+            <div class="span3" style="background-color:#0094ff; height:40px;"> Span 3 </div>
+        </div>
+        <div class="row">
+            <div class="span10" style="background-color:#ff6a00; height:40px;"> Span 10 </div>
+            <div class="span2" style="background-color:#0094ff; height:40px;"> Span 2 </div>
+        </div>
+        <div class="row">
+            <div class="span11" style="background-color:#ff6a00; height:40px;"> Span 11 </div>
+            <div class="span1" style="background-color:#0094ff; height:40px;"> Span 1 </div>
+        </div>
+        <div class="row">
+            <div class="span12" style="background-color:#ff6a00; height:40px;"> Span 12 </div>
+        </div>
+
+
+        <p>Sometimes we want to make a span float to the right or to the left of the container...  To do that, we use two classes
+            <ol>
+                <li>pull-left - pulls to the left</li>
+                <li>pull-right - pulls to the right</li>
+            </ol>
+        </p>
+
+        <p>Here's the code to create a 3 span division that floats to the left of the container.</p>
+<pre class="prettyprint linenums">
+&lt;div class="span1 pull-left"&gt; Span 3 - pull Left &lt;/div&gt;
+</pre>
+        <div class="row">
+            <div class="row">
+                <div class="span3 pull-left" style="background-color:#ff6a00; height:40px;"> Span 3 - pull Left </div>
+            </div>
+        </div>
+<hr />
+        <p>Here's the code to create a 3 span division that floats to the right of the container.</p>
+<pre class="prettyprint linenums">
+&lt;div class="span1 pull-right"&gt; Span 3 - pull-right &lt;/div&gt;
+</pre>
+        <div class="row">
+            <div class="row">
+                <div class="span3 pull-right" style="background-color:#ff6a00; height:40px;"> Span 3 - pull-right </div>
+            </div>
+        </div>
+
+<hr />
+
+        <p><em>Notice how we use multiple class names within the class tag... Using multiple classes is a pretty powerful technique.  In the examples below, I am using the offset classes to position the division at different locations within the container.</em></p>
+
+
+        <p>Here's the code to create a 3 span division and places it ONE column from the left edg of the container.</p>
+<pre class="prettyprint linenums">
+&lt;div class="span1 offset1"&gt; Span 3 - offset1 &lt;/div&gt;
+</pre>
+        <div class="row">
+            <div class="row">
+                <div class="span3 offset1" style="background-color:#ff6a00; height:40px;"> Span 3 - offset1 </div>
+            </div>
+        </div>
+
+        <p>Here's the code to create a 3 span division and places it TWO columns from the left edg of the container.</p>
+<pre class="prettyprint linenums">
+&lt;div class="span1 offset2"&gt; Span 3 - offset2 &lt;/div&gt;
+</pre>
+
+        <div class="row">
+            <div class="row">
+                <div class="span3 offset2" style="background-color:#ff6a00; height:40px;"> Span 3 - offset2 </div>
+            </div>
+        </div>
+
+        <p>Here's the code to create a 3 span division and places it THREE columns from the left edg of the container.</p>
+<pre class="prettyprint linenums">
+&lt;div class="span1 offset3"&gt; Span 3 - offset3 &lt;/div&gt;
+</pre>
+
+        <p>In this last example, we're placing various colors of divisions with different heights in a container. This is mostly to drive home the concept of containership.  
+           Generally, divisions float up and to the left, unless we instruct them to do otherwise. 
+        </p>
+
+        <div class="row">
+            <div class="row">
+                <div class="span3 offset3" style="background-color:#ff6a00; height:40px;"> Span 3 - offset3 </div>
+            </div>
+        </div>
+
+        <p>And so on...</p>
+
+        <div class="row">
+            <div class="row">
+                <div class="span3 offset4" style="background-color:#ff6a00; height:40px;"> Span 3 - offset4 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="span3 offset5" style="background-color:#ff6a00; height:40px;"> Span 3 - offset5 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="span3 offset6" style="background-color:#ff6a00; height:40px;"> Span 3 - offset6 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="span3 offset7" style="background-color:#ff6a00; height:40px;"> Span 3 - offset7 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="span3 offset8" style="background-color:#ff6a00; height:40px;"> Span 3 - offset8 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="span3 offset9" style="background-color:#ff6a00; height:40px;"> Span 3 - offset9 </div>
+            </div>
+        </div>
+
+
+
+        <div class="row" style="background-color:#DDDDDD;">
+            <div class="span3" style="background-color:#FF0000; height:200px;">
+
+            </div>
+            <div class="span3" style="background-color:#00FF00; height:100px;">
+
+            </div>
+            <div class="span3" style="background-color:#0000FF; height:100px;">
+
+            </div>
+            <div class="span3" style="background-color:#FF0000; height:200px;">
+
+            </div>
+            <div class="span3" style="background-color:#00FF00; height:200px;">
+
+            </div>
+            <div class="span3" style="background-color:#0000FF; height:100px;">
+
+            </div>
+            <div class="span3" style="background-color:#FF0000; height:200px;">
+
+            </div>
+            <div class="span3" style="background-color:#00FF00; height:100px;">
+
+            </div>
+            <div class="span3" style="background-color:#0000FF; height:100px;">
+
+            </div>
+        </div>
+
+        <div class="span12" style="height:30px;">
+
+        </div>
+
+    </div>
+
+        <p>We can use this concept of Containership and Column Spans to create a solid, predictable, pattern for placing elements on a page.. here's an example layout
+        </p>
+    <div class="container" style="background-color:#EEEEEE; margin-top:0px;margin-bottom:0px;">
+        <div class="row" style="margin-top:0px;margin-bottom:0px;">
+            <div class="span12" style="background-color:#333333; height:30px;color:#ffffff;margin-top:0px;margin-bottom:0px;">Span 12 makes a convincing menu bar...</div>
+            <div class="well span10 offset1" style="height:200px;margin-top:0px;margin-bottom:0px;">Here's a hero unit that could display an image, or maybe a slider ...</div>
+            <div class="span11" style="height:10px;margin-top:0px;margin-bottom:0px;"></div>
+            <div class="span4" style="height:500px;margin-top:0px;margin-bottom:0px;margin-left:30px; background-color:#ffffff;">Here's a 4 span column on the left</div>
+            <div class="span5" style="height:500px;margin-top:0px;margin-bottom:0px;margin-left:30px; background-color:#ffffff;">And a 5 span in the middle</div>
+            <div class="span2" style="height:500px;margin-top:0px;margin-bottom:0px;margin-left:20px; background-color:#ffffff;">followed by a 2 on the right</div>
+            <div class="span12" style="height:300px; background-color:#333333; color:#DDDDDD;margin-top:0px;margin-bottom:0px;">Followed by a footer</div>
+        </div>
+    </div>
+    <div class="row" style="height:400px; background-color:#333333">
+        <div class="container" style="margin-bottom:0px;">
+            <div class="span12" style="height:400px; background-color:#333333;margin-bottom:0px;">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="Scripts/jquery-1.8.2.min.js"></script>
+    <script src="vendors/google-code-prettify/prettify.js"></script>
+    <script src="vendors/google-code-prettify/lang-css.js"></script>
+    <script src="vendors/google-code-prettify/run_prettify.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            window.prettyPrint && prettyPrint();
+        });
+
+    </script>
+</body>
+</html>
